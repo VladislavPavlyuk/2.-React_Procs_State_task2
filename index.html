@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>React</title>
+    <style>
+        button
+        {
+            margin: 20px;
+            border-radius: 30px;
+            font-size: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: black;
+            color: yellow;
+            border: 4px yellow solid;
+
+        }
+        img
+        {
+            border: 3px black solid;
+            border-radius: 20px;
+            height: 200px;
+            background-color: white;
+
+        }
+        select
+        {
+            border-radius: 10px;
+            border: 3px solid white;
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+        .divall
+        {
+            display: inline-flex;  
+            justify-content: center;
+            background-color: rgb(141, 182, 235); 
+            padding: 20px; 
+            border-radius: 20px; 
+            border: 5px inset;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+    </style>
+</head>
+<body style="background-color: darkblue;">
+    <div id="app"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="ClubList.jsx">
+    </script>
+    <script type="text/babel" src="ClubsSelect.jsx">
+    </script>
+    <script type="text/babel" src="ClubComposition.jsx">
+    </script>
+    <script type="text/babel" src="ClubAchievements.jsx">
+    </script>
+    
+    <script type="text/babel">
+         const propsValues = {
+        
+       clubs: [ 
+            {
+                "name": "Манчестер Юнайтед",
+                "year": "1878",
+                "symbol": "/image/375px-Manchester_United_FC_crest.svg.png",
+                "city": "Stretford",
+                "achievement":
+                [
+                    "Чемпион Англии: 20",
+                    "Кубок Англии: 12",
+                    "Кубок Английской футбольной лиги: 5",
+                    "Суперкубок Англии: 21",
+                    "Кубок европейских чемпионов / Лига чемпионов УЕФА: 3",
+                    "Лига Европы УЕФА: 1",
+                    "Кубок обладателей кубков УЕФА: 1",
+                    "Суперкубок УЕФА: 1",
+                    "Межконтинентальный кубок: 1",
+                    "Клубный чемпионат мира: 1"
+                ],
+                "teamСomposition":[
+                    {position: "Вр", name: "Давид ду Хеа"},
+                    {position: "З", name: "Виктор Линделёф"},
+                    {position: "З", name: "Эрик Байи"},
+                    {position: "З", name: "Фил Джонс"},
+                    {position: "З", name: "Гарри Магуайр"},
+                    {position: "ПЗ", name: "Поль Погба"},
+                    {position: "Н", name: "Криштиану Роналду"},
+                    {position: "ПЗ", name: "Хуан Мата"},
+                    {position: "Н", name: "Антони Марсьяль"},
+                    {position: "Н", name: "Маркус Рашфорд"},
+                    {position: "Н", name: "Мейсон Гринвуд"},
+                    {position: "В", name: "Ли Грант"},
+                    {position: "ПЗ", name: "Амад Диалло"},
+                    {position: "ПЗ", name: "Фред"},
+                    {position: "ПЗ", name: "Бруну Фернандеш"},
+                    {position: "З", name: "Рафаэль Варан"},
+                    {position: "З", name: "Диогу Дало"},
+                    {position: "Н", name: "Эдинсон Кавани"},
+                    {position: "В", name: "Том Хитон"},
+                    {position: "З", name: "Люк Шоу"},
+                    {position: "ПЗ", name: "Джейдон Санчо"},
+                    {position: "В", name: "Дин Хендерсон"},
+                    {position: "З", name: "Алекс Теллес"},
+                    {position: "З", name: "Эрон Уан-Биссака"},
+                    {position: "ПЗ", name: "Неманья Матич"},
+                    {position: "ПЗ", name: "Донни ван де Бек"},
+                    {position: "Н", name: "Антони Эланга"},
+                    {position: "ПЗ", name: "Скотт Мактоминей"},
+                    {position: "З", name: "Теден Менги"},
+                    {position: "ПЗ", name: "Ханнибал Межбри"},
+                    {position: "Н", name: "Шола Шоретире"}
+                ]
+
+            },
+             
+            {
+                "name": "Реал",
+                "year": "1902",
+                "symbol": "/image/Real_Madrid_CF.svg.png",
+                "city": "Madrid",
+                achievement:
+                [
+                    "Чемпионат Испании: 34",
+                    "Кубок Испании: 19",
+                    "Суперкубок Испании: 11",
+                    "Кубок Эвы Дуарте: 1",
+                    "Кубок лиги: 1",
+                    "Региональный Чемпионат/Трофей Манкомунадо: 23",
+                    "Лига чемпионов УЕФА / Кубок европейских чемпионов: 13",
+                    "Кубок УЕФА: 2",
+                    "Суперкубок УЕФА: 4",
+                    "Межконтинентальный кубок: 3",
+                    "Клубный чемпионат мира: 4",
+                    "Малый Кубок мира: 2",
+                    "Латинский кубок: 2",
+                    "Иберо-американский кубок: 1",
+                    "Кубок Франца Беккенбауэра: 1",
+                    "Кубок Сантьяго Бернабеу: 28"
+                ],
+                teamСomposition:[
+                    {position: "Вр", name: "Тибо Куртуа"},
+                    {position: "Вр", name: "Андрей Лунин"},
+                    {position: "З", name: "Дани Карвахаль"},
+                    {position: "З", name: "Эдер Милитан"},
+                    {position: "З", name: "Давид Алаба"},
+                    {position: "З", name: "Хесус Вальехо"},
+                    {position: "З", name: "Начо"},
+                    {position: "З", name: "Марсело"},
+                    {position: "З", name: "Лукас Васкес"},
+                    {position: "З", name: "Ферлан Менди"},
+                    {position: "ПЗ", name: "Тони Кроос"},
+                    {position: "ПЗ", name: "Лука Модрич"},
+                    {position: "ПЗ", name: "Каземиро"},
+                    {position: "ПЗ", name: "Федерико Вальверде"},
+                    {position: "ПЗ", name: "Иско"},
+                    {position: "ПЗ", name: "	Дани Себальос"},
+                    {position: "Н", name: "	Эден Азар"},
+                    {position: "Н", name: 	"Карим Бензема"},
+                    {position: "Н", name: "Марко Асенсио"},
+                    {position: "Н", name: "Лука Йович"},
+                    {position: "Н", name: "Гарет Бейл"},
+                    {position: "Н", name: "Винисиус Жуниор"},
+                    {position: "Н", name: "	Родриго"},
+                    {position: "Н", name: "Мариано"}
+                ]
+
+            }
+        ]
+        
+        };
+        ReactDOM.render(            
+            <ClubList data={propsValues}/>,
+        document.getElementById("app")
+        )
+    </script>
+</body>
+</html>
